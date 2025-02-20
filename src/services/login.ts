@@ -40,7 +40,6 @@ export const createLogin = async (email: string, password: string) => {
 
     // Enviar o objeto para a API (JSON Server) via POST
     const response = await api.post('/users', user);
-    console.log('Usuário criado com sucesso:', response.data);
 
     return response;
   } catch (error) {

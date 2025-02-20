@@ -9,7 +9,7 @@ import { Usuario } from "@/model/usuario-model";
 import { formPerfilSchema } from "@/schemas/perfil-schema";
 import apiViaCep from "@/services/apiViaCep";
 import { toast } from "sonner";
-import { FormCad } from "@/components/common/form-cad-user";
+import { FormCad } from "@/components/specific/form-cad-user";
 
 export default function Perfil() {
   const [usuario, setUsuario] = useState<Usuario | null>(null);

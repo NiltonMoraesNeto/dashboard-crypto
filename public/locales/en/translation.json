@@ -6,6 +6,17 @@
     "buttonEnter":"Sign in",
     "buttonCreateAccount":"Don't have an account? Click here to create one"
   },
+  "createLogin":{
+    "title":"Create new account",
+    "description":"Fill in the fields below to create your account.",
+    "placeholderEmail":"Email",
+    "placeholderPassword":"Password",
+    "buttonCreateAccount":"Create account",
+    "buttonCancel":"Cancel",
+    "apiTitle": "User",
+    "apiMsgSuccess": "User created successfully",
+    "apiMsgError": "Could not create user"
+  },
   "sidebar":{
       "changePassword": "Change password",
       "label": "Fill in the fields below to change your password",
@@ -14,9 +25,42 @@
       "buttonCancel": "Cancel",
       "apiTitle": "Password",
       "apiMsgSuccess": "Data changed successfully",
-      "apiMsgError": "It was not possible to change the data"
+      "apiMsgError": "It was not possible to change the data",
+      "optionDashboard": "Dashboard",
+      "optionProfile": "Profile",
+      "optionSettings": "Settings",
+      "optionExchange": "Exchange",
+      "optionCoins": "Coins",
+      "optionAccount": "Account",
+      "optionPreferences": "Preferences",
+      "title": "Company name",
+      "darkMode": "Dark Mode",
+      "lightMode": "Light Mode",
+      "buttonExit": "Log out",
+      "listCoins": "List of Coins"
   },
   "dashboard":{
       "lastUpdated": "Last updated"
+  },
+  "pagination":{
+      "of": "of",
+      "coinsTotal": "total"
+  },
+  "exchange":{
+      "title": "Exchange",
+      "from": "From:",
+      "to": "To:",
+      "quantity": "Quantity:",
+      "convertedValue": "Converted Value:"
+  },
+  "coins":{
+      "title": "List",
+      "logo": "Logo",
+      "latestUpdate": "Latest Update",
+      "name": "Name",
+      "maxValue": "MAX Value 24h",
+      "minValue": "MIN Value 24h",
+      "favorite": "Favorite",
+      "placeholder":"Search by Name"
   }
 }

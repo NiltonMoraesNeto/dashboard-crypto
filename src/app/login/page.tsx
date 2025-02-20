@@ -8,7 +8,7 @@ import { createLogin, login } from "@/services/login";
 import { toast } from "sonner";
 import { usuarioPost } from "@/services/usuario";
 import { useTranslation } from "react-i18next";
-import { FormCadPassword } from "@/components/common/form-cad-password";
+import { FormCadPassword } from "@/components/specific/form-cad-password";
 
 export default function Login() {
   const [email, setEmail] = useState("");

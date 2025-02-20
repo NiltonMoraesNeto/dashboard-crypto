@@ -6,6 +6,17 @@
     "buttonEnter":"Entrar",
     "buttonCreateAccount":"Não tem uma conta? Clique aqui para criar"
   },
+  "createLogin":{
+    "title":"Criar nova conta",
+    "description":"Preencha os campos abaixo para criar sua conta.",
+    "placeholderEmail":"Email",
+    "placeholderPassword":"Senha",
+    "buttonCreateAccount":"Criar conta",
+    "buttonCancel":"Cancelar",
+    "apiTitle": "Usuário",
+    "apiMsgSuccess": "Usuário criado com sucesso",
+    "apiMsgError": "Não foi possível criar o usuário"
+  },
   "sidebar":{
       "changePassword": "Alterar senha",
       "label": "Preencha os campos abaixo para alterar a sua senha",
@@ -14,9 +25,42 @@
       "buttonCancel": "Cancelar",
       "apiTitle": "Senha",
       "apiMsgSuccess": "Dados alterados com sucesso",
-      "apiMsgError": "Não foi possível alterar os dados"
+      "apiMsgError": "Não foi possível alterar os dados",
+      "optionDashboard": "Dashboard",
+      "optionProfile": "Perfil",
+      "optionSettings": "Configurações",
+      "optionCoins": "Moedas",
+      "optionExchange": "Câmbio",
+      "optionAccount": "Conta",
+      "optionPreferences": "Preferências",
+      "title": "Nome da empresa",
+      "darkMode": "Modo Escuro",
+      "lightMode": "Modo Claro",
+      "buttonExit": "Sair",
+      "listCoins": "Lista de Moedas"
   },
   "dashboard":{
       "lastUpdated": "Última atualização"
+  },
+  "pagination":{
+      "of": "de",
+      "coinsTotal": "total"
+  },
+  "exchange":{
+      "title": "Câmbio",
+      "from": "De:",
+      "to": "Para:",
+      "quantity": "Quantidade:",
+      "convertedValue": "Valor Convertido:"
+  },
+  "coins":{
+      "title": "Listagem",
+      "logo": "Logo",
+      "latestUpdate": "Última Atualização",
+      "name": "Nome",
+      "maxValue": "Valor MAX 24h",
+      "minValue": "Valor MIN 24h",
+      "favorite": "Favoritar",
+      "placeholder":"Pesquisar por Nome"
   }
 }

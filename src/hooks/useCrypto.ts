@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { fetchAllCoins, fetchMarketData } from "@/services/coins-service";
 import { CryptoData } from "@/model/crypto-data-model";
+import { toast } from "sonner";
 
 export const useCrypto = () => {
   const [allCoins, setAllCoins] = useState<{ id: string; name: string }[]>([]);
@@ -43,8 +44,12 @@ export const useCrypto = () => {
       setLoading(true);
       try {
         const data = await fetchMarketData(filteredCoins, currentPage, itemsPerPage);
+        console.log("🚀 data aqui- ", data)
         setMarketData(data);
       } catch (err) {
+        toast.error("Erro", {
+        description: "Error fetching market data: " + err,
+      });
         console.error("Error fetching market data:", err);
       } finally {
         setLoading(false);

@@ -1,6 +1,6 @@
 "use client";
 import { ProtectedRoute } from "@/app/components/ProtectedRoute";
-import { FormCad } from "@/components/common/form-cad-user";
+import { FormCad } from "@/components/specific/form-cad-user";
 import { formPerfilSchema } from "@/schemas/perfil-schema";
 import apiViaCep from "@/services/apiViaCep";
 import { createLogin } from "@/services/login";
@@ -56,7 +56,6 @@ export default function Conta() {
 
   async function onSubmit(values: z.infer<typeof formPerfilSchema>) {
     const response = await usuarioPost(values);
-    console.log("🚀  response - ", response);
 
     if (response && response.status === 201) {
       const responseLogin = await createLogin(values.email, "teste");

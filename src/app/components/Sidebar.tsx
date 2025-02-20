@@ -17,12 +17,14 @@ import {
   Settings,
   ChevronDown,
   Coins,
+  Bitcoin,
+  Landmark,
 } from "lucide-react";
 import { logout, updatePassword } from "@/services/login";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
-import { DrawerPassword } from "@/components/common/drawer-password";
-import { AvatarChangeLanguage } from "@/components/common/avatar-change-language";
+import { DrawerPassword } from "@/components/specific/drawer-password";
+import { AvatarChangeLanguage } from "@/components/specific/avatar-change-language";
 
 type MenuItem = {
   icon: React.ElementType;
@@ -45,7 +47,23 @@ export function Sidebar() {
   const menuItems: MenuItem[] = [
     { icon: Home, label: t("sidebar.optionDashboard"), href: "/dashboard" },
     { icon: User, label: t("sidebar.optionProfile"), href: "/perfil" },
-    { icon: Coins, label: t("sidebar.listCoins"), href: "/coins" },
+    {
+      icon: Coins,
+      label: t("sidebar.optionCoins"),
+      href: "/coins",
+      submenu: [
+        {
+          icon: Bitcoin,
+          label: t("sidebar.listCoins"),
+          href: "/coins",
+        },
+        {
+          icon: Landmark,
+          label: t("sidebar.optionExchange"),
+          href: "/exchange",
+        },
+      ],
+    },
     {
       icon: Settings,
       label: t("sidebar.optionSettings"),

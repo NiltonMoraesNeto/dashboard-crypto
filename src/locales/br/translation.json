@@ -29,6 +29,8 @@
       "optionDashboard": "Dashboard",
       "optionProfile": "Perfil",
       "optionSettings": "Configurações",
+      "optionCoins": "Moedas",
+      "optionExchange": "Câmbio",
       "optionAccount": "Conta",
       "optionPreferences": "Preferências",
       "title": "Nome da empresa",
@@ -43,5 +45,22 @@
   "pagination":{
       "of": "de",
       "coinsTotal": "total"
+  },
+  "exchange":{
+      "title": "Câmbio",
+      "from": "De:",
+      "to": "Para:",
+      "quantity": "Quantidade:",
+      "convertedValue": "Valor Convertido:"
+  },
+  "coins":{
+      "title": "Listagem",
+      "logo": "Logo",
+      "latestUpdate": "Última Atualização",
+      "name": "Nome",
+      "maxValue": "Valor MAX 24h",
+      "minValue": "Valor MIN 24h",
+      "favorite": "Favoritar",
+      "placeholder":"Pesquisar por Nome"
   }
 }

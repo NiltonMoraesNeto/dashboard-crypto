@@ -29,6 +29,8 @@
       "optionDashboard": "Dashboard",
       "optionProfile": "Profile",
       "optionSettings": "Settings",
+      "optionExchange": "Exchange",
+      "optionCoins": "Coins",
       "optionAccount": "Account",
       "optionPreferences": "Preferences",
       "title": "Company name",
@@ -43,5 +45,22 @@
   "pagination":{
       "of": "of",
       "coinsTotal": "total"
+  },
+  "exchange":{
+      "title": "Exchange",
+      "from": "From:",
+      "to": "To:",
+      "quantity": "Quantity:",
+      "convertedValue": "Converted Value:"
+  },
+  "coins":{
+      "title": "List",
+      "logo": "Logo",
+      "latestUpdate": "Latest Update",
+      "name": "Name",
+      "maxValue": "MAX Value 24h",
+      "minValue": "MIN Value 24h",
+      "favorite": "Favorite",
+      "placeholder":"Search by Name"
   }
 }

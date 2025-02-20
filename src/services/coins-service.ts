@@ -9,7 +9,6 @@ export const fetchCryptoData = async (coins: string[]) => {
       },
     });
 
-    console.log("🚀 response - ", response.data);
     return response.data;
   } catch (error) {
     console.error("Erro ao consultar as moedas", error);
@@ -55,10 +54,9 @@ export const fetchMarketData = async (coinIds: string[], page: number = 1, perPa
         sparkline: false,
       },
     });
-
-    return response.data; // ✅ Axios retorna os dados aqui
+    return response.data;
   } catch (error) {
     console.error("Failed to fetch market data:", error);
-    throw new Error("Failed to fetch market data");
+    return [];
   }
 };
