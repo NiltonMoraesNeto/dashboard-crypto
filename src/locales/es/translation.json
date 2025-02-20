@@ -34,9 +34,14 @@
       "title": "Nombre de la empresa",
       "darkMode": "Modo Oscuro",
       "lightMode": "Modo Claro",
-      "buttonExit": "Salir"
+      "buttonExit": "Salir",
+      "listCoins": "Lista de Monedas"
   },
   "dashboard":{
       "lastUpdated": "Última actualización"
+  },
+  "pagination":{
+      "of": "de",
+      "coinsTotal": "total"
   }
 }

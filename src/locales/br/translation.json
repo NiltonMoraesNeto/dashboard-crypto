@@ -34,9 +34,14 @@
       "title": "Nome da empresa",
       "darkMode": "Modo Escuro",
       "lightMode": "Modo Claro",
-      "buttonExit": "Sair"
+      "buttonExit": "Sair",
+      "listCoins": "Lista de Moedas"
   },
   "dashboard":{
       "lastUpdated": "Última atualização"
+  },
+  "pagination":{
+      "of": "de",
+      "coinsTotal": "total"
   }
 }

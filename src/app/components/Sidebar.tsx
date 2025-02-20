@@ -16,6 +16,7 @@ import {
   Moon,
   Settings,
   ChevronDown,
+  Coins,
 } from "lucide-react";
 import { logout, updatePassword } from "@/services/login";
 import { toast } from "sonner";
@@ -44,6 +45,7 @@ export function Sidebar() {
   const menuItems: MenuItem[] = [
     { icon: Home, label: t("sidebar.optionDashboard"), href: "/dashboard" },
     { icon: User, label: t("sidebar.optionProfile"), href: "/perfil" },
+    { icon: Coins, label: t("sidebar.listCoins"), href: "/coins" },
     {
       icon: Settings,
       label: t("sidebar.optionSettings"),

@@ -34,9 +34,14 @@
       "title": "Company name",
       "darkMode": "Dark Mode",
       "lightMode": "Light Mode",
-      "buttonExit": "Log out"
+      "buttonExit": "Log out",
+      "listCoins": "List of Coins"
   },
   "dashboard":{
       "lastUpdated": "Last updated"
+  },
+  "pagination":{
+      "of": "of",
+      "coinsTotal": "total"
   }
 }

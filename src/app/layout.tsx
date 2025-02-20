@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "./components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { I18nProvider } from "./components/I18nProvider";
+import { FavoritesProvider } from "@/context/FavoritesContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,8 +35,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <I18nProvider>
-            {children}
-            <Toaster />
+            <FavoritesProvider>
+              {children}
+              <Toaster />
+            </FavoritesProvider>
           </I18nProvider>
         </ThemeProvider>
       </body>
