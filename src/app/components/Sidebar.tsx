@@ -219,7 +219,7 @@ export function Sidebar() {
             size="icon"
             onClick={cycleTheme}
             className={`w-full transition-all duration-300 ${
-              isOpen ? "flex items-center justify-center" : "p-2"
+              isOpen ? "flex items-center justify-center" : "block p-2 ml-1 h-8"
             }`}
           >
             {getThemeIcon()}

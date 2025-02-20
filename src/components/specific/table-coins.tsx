@@ -3,7 +3,7 @@ import { CryptoData } from "@/model/crypto-data-model";
 import { useTranslation } from "react-i18next";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import CurrencyFormatter from "../common/currency-formatter";
-import { Heart, HeartOff } from "lucide-react";
+import { Star, StarOff } from "lucide-react";
 
 interface TableCoinsProps {
   marketData: CryptoData[];
@@ -80,9 +80,9 @@ export function TableCoins({
                 <td className="text-xs p-4 truncate">
                   <button
                     onClick={() => toggleFavorite(item.id)}
-                    className="text-red-500"
+                    className="dark:text-blue-500 text-green-700"
                   >
-                    {isFavorite(item.id) ? <Heart /> : <HeartOff />}
+                    {isFavorite(item.id) ? <Star /> : <StarOff />}
                   </button>
                 </td>
               </tr>
