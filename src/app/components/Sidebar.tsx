@@ -184,88 +184,104 @@ export function Sidebar() {
   };
 
   return (
-    <aside
-      className={`
+    <>
+      <aside
+        className={`
       fixed top-0 left-0 z-40 h-screen
       transition-all duration-300 ease-in-out
-      ${isOpen ? "w-64" : "w-16"}
+      ${
+        isOpen
+          ? "w-64 max:sm:w-full"
+          : "-translate-x-full sm:w-16 sm:translate-x-0"
+      }
       bg-background border-r
     `}
-    >
-      <div className="flex flex-col h-full">
-        <div className="flex justify-between items-center p-4">
-          <span
-            className={`text-xl font-semibold transition-opacity duration-300 ${
-              isOpen ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            {t("sidebar.title")}
-          </span>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleSidebar}
-            className="hover:bg-accent"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </Button>
-        </div>
-        <nav className="flex-grow p-4">
-          <ul className="space-y-2">{menuItems.map(renderMenuItem)}</ul>
-        </nav>
-        <div className="p-4 space-y-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={cycleTheme}
-            className={`w-full transition-all duration-300 ${
-              isOpen ? "flex items-center justify-center" : "block p-2 ml-1 h-8"
-            }`}
-          >
-            {getThemeIcon()}
+      >
+        <div className="flex flex-col h-full">
+          <div className="flex justify-between items-center p-4">
             <span
-              className={`ml-2 transition-opacity duration-300 ${
-                isOpen ? "opacity-100" : "opacity-0 w-0 -ml-4"
+              className={`text-xl font-semibold transition-opacity duration-300 ${
+                isOpen ? "opacity-100" : "opacity-0"
               }`}
             >
-              {theme === "light"
-                ? t("sidebar.darkMode")
-                : t("sidebar.lightMode")}
+              {t("sidebar.title")}
             </span>
-          </Button>
-
-          <AvatarChangeLanguage
-            changeLanguage={changeLanguage}
-            isOpen={isOpen}
-          />
-
-          <DrawerPassword
-            isOpenPassword={isOpenPassword}
-            setIsOpenPassword={setIsOpenPassword}
-            isOpen={isOpen}
-            error={error}
-            handleSubmitNewPassword={handleSubmitNewPassword}
-            password={password}
-            setPassword={setPassword}
-          />
-          <Button
-            variant="outline"
-            onClick={handleLogout}
-            className={`w-full transition-all duration-300 ${
-              isOpen ? "flex items-center justify-center" : "p-2"
-            }`}
-          >
-            <LogOut size={24} />
-            <span
-              className={`transition-opacity duration-300 ${
-                isOpen ? "opacity-100" : "opacity-0 w-0 -ml-2"
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleSidebar}
+              className="hover:bg-accent"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </Button>
+          </div>
+          <nav className="flex-grow p-4">
+            <ul className="space-y-2">{menuItems.map(renderMenuItem)}</ul>
+          </nav>
+          <div className="p-4 space-y-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={cycleTheme}
+              className={`w-full transition-all duration-300 ${
+                isOpen
+                  ? "flex items-center justify-center"
+                  : "block p-2 ml-1 h-8"
               }`}
             >
-              {t("sidebar.buttonExit")}
-            </span>
-          </Button>
+              {getThemeIcon()}
+              <span
+                className={`ml-2 transition-opacity duration-300 ${
+                  isOpen ? "opacity-100" : "opacity-0 w-0 -ml-4"
+                }`}
+              >
+                {theme === "light"
+                  ? t("sidebar.darkMode")
+                  : t("sidebar.lightMode")}
+              </span>
+            </Button>
+
+            <AvatarChangeLanguage
+              changeLanguage={changeLanguage}
+              isOpen={isOpen}
+            />
+
+            <DrawerPassword
+              isOpenPassword={isOpenPassword}
+              setIsOpenPassword={setIsOpenPassword}
+              isOpen={isOpen}
+              error={error}
+              handleSubmitNewPassword={handleSubmitNewPassword}
+              password={password}
+              setPassword={setPassword}
+            />
+            <Button
+              variant="outline"
+              onClick={handleLogout}
+              className={`w-full transition-all duration-300 ${
+                isOpen ? "flex items-center justify-center" : "p-2"
+              }`}
+            >
+              <LogOut size={24} />
+              <span
+                className={`transition-opacity duration-300 ${
+                  isOpen ? "opacity-100" : "opacity-0 w-0 -ml-2"
+                }`}
+              >
+                {t("sidebar.buttonExit")}
+              </span>
+            </Button>
+          </div>
         </div>
-      </div>
-    </aside>
+      </aside>
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={toggleSidebar}
+        className="hover:bg-accent"
+      >
+        {isOpen ? <X size={24} /> : <Menu size={24} />}
+      </Button>
+    </>
   );
 }
