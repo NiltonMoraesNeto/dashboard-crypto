@@ -40,9 +40,7 @@ export default function Login() {
     const success = await createLogin(newEmail, newPassword);
 
     if (success) {
-      const newAccount = {
-        email: newEmail,
-      };
+      const newAccount = { email: newEmail };
       await usuarioPost(newAccount);
       setIsOpen(false);
       toast.success(t("createLogin.apiTitle"), {
@@ -57,9 +55,11 @@ export default function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-background">
-      <div className="space-y-4 w-full max-w-md p-8 bg-card rounded-lg shadow-lg">
-        <h1 className="text-2xl font-bold text-center">{t("login.title")}</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-background">
+      <div className="w-full max-w-sm md:max-w-md p-4 md:p-8 bg-card rounded-lg shadow-lg">
+        <h1 className="text-2xl font-bold text-center mb-2">
+          {t("login.title")}
+        </h1>
         {error && <p className="text-red-500 text-center">{error}</p>}
         <form onSubmit={handleSubmit} className="space-y-4">
           <Input
